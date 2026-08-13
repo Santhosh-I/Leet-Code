@@ -6,8 +6,9 @@ class Solution:
 
         for i in range(k,len(nums)):
 
-            avg += nums[i] - nums[i-k]
-            
+            avg += nums[i]
+            avg -= nums[i-k]
+
             max_avg = max(max_avg, avg)
         
         return max_avg / k
