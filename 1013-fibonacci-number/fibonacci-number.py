@@ -4,7 +4,7 @@ class Solution:
         a , b = 0 , 1
         fibo = []
 
-        for i in range(30):
+        for i in range(31):
             fibo.append(a)
             a , b = b , a + b
         
