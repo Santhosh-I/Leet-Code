@@ -5,6 +5,6 @@ class Solution:
         """
         k = k%len(nums)
 
-        nums[:] = nums[len(nums)-k:] + nums[:len(nums)-k]
+        nums[:] = nums[-k:] + nums[:-k]
 
         return nums
