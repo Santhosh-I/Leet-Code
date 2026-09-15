@@ -1,10 +1,16 @@
 class Solution:
     def firstUniqChar(self, s: str) -> int:
 
-        for i in range(len(s)):
-            if s[i] not in s[:i]:
-                if s[i] not in s[i+1:]:
-                    return i
-        return -1
+        freq = {}
+
+        for i in s:
+            freq[i] = freq.get(i,0) + 1
+
+        for i in s:
+            if freq[i] == 1:
+                return s.index(i)
+                break
+        else:
+            return -1        
 
         
