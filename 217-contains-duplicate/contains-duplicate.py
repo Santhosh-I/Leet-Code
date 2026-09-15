@@ -1,10 +1,15 @@
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
 
-        without_duplicate = set(nums)
+        freq = {}
 
-        if len(nums) != len(without_duplicate):
-            return True
+        for i in nums:
+            freq[i] = freq.get(i,0) + 1
+        
+        for i in  nums:
+            if freq[i] != 1:
+                return True
+
         else:
             return False
         
