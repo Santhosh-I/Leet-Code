@@ -8,7 +8,7 @@ class Solution:
             freq[i] = freq.get(i,0) + 1
 
         for i in nums:
-            if freq[i] > 1:
+            if freq[i] == 2:
                 res.append(i)
 
         return (list(set(res)))
